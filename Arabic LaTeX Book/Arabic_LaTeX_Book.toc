@@ -1,0 +1,48 @@
+\select@language {arabic}
+\contentsline {section}{شكر وإهداء}{ج}{Doc-Start}
+\contentsline {paragraph}{مقدمة الكتاب:}{3}{chapter*.1}
+\contentsline {chapter}{\numberline {1}مدخل إلى \textenglish {\LRE {\LaTeX }}}{5}{chapter.1}
+\contentsline {section}{\numberline {1‏.‏1}ما هو \textenglish {\LRE {\LaTeX }}؟}{5}{section.1.1}
+\contentsline {section}{\numberline {1‏.‏2}\textenglish {\LRE {\LaTeX }} ومعالجات النصوص}{5}{section.1.2}
+\contentsline {section}{\numberline {1‏.‏3}تثبيت البرنامج}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1‏.‏3‏.‏1}على الويندوز}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1‏.‏3‏.‏2}على الـ \textenglish {Mac}}{7}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1‏.‏3‏.‏3}على لينكس}{7}{subsection.1.3.3}
+\select@language {english}
+\select@language {arabic}
+\select@language {english}
+\select@language {arabic}
+\contentsline {section}{\numberline {1‏.‏4}مرحبا بالعالم مع \textenglish {\LRE {\LaTeX }}}{7}{section.1.4}
+\select@language {english}
+\select@language {arabic}
+\contentsline {section}{\numberline {1‏.‏5}الخلاصة}{9}{section.1.5}
+\contentsline {chapter}{\numberline {2}التنسيق والتقسيم والتخطيط}{11}{chapter.2}
+\contentsline {section}{\numberline {2‏.‏1}التخطيط الأساسي للوثائق}{11}{section.2.1}
+\contentsline {section}{\numberline {2‏.‏2}التنسيق}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2‏.‏2‏.‏1}تنسيق النصوص}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2‏.‏2‏.‏2}تنسيق الفقرات}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2‏.‏2‏.‏3}تنسيق الألوان}{12}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2‏.‏2‏.‏4}الروابط}{12}{subsection.2.2.4}
+\contentsline {section}{\numberline {2‏.‏3}الخطوط}{13}{section.2.3}
+\contentsline {section}{\numberline {2‏.‏4}الجداول}{13}{section.2.4}
+\select@language {english}
+\select@language {arabic}
+\select@language {english}
+\select@language {arabic}
+\contentsline {section}{\numberline {2‏.‏5}الصور والرسومات}{14}{section.2.5}
+\contentsline {section}{\numberline {2‏.‏6}التذييل والتذييل الجانبي}{14}{section.2.6}
+\contentsline {section}{\numberline {2‏.‏7}العلامات والإشارات المرجعية}{14}{section.2.7}
+\contentsline {chapter}{\numberline {3}تصميم الصفحات}{15}{chapter.3}
+\contentsline {section}{\numberline {3‏.‏1}الهوامش \textenglish {Margins}}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏1}الصفحات متعددة الأعمدة}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏2}تغيير حجم الصفحة}{15}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏3}تغيير نمط الصفحة}{15}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏4}إضافة الفهرس}{15}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏5}الفصول}{15}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3‏.‏1‏.‏6}الترويسة والتذييلة}{15}{subsection.3.1.6}
+\contentsline {section}{\numberline {3‏.‏2}الخلاصة}{15}{section.3.2}
+\contentsline {chapter}{\numberline {4}القوائم}{17}{chapter.4}
+\contentsline {section}{\numberline {4‏.‏1}القوائم النقطية}{17}{section.4.1}
+\contentsline {section}{\numberline {4‏.‏2}القوائم العددية}{17}{section.4.2}
+\contentsline {section}{\numberline {4‏.‏3}القوائم الوصفية}{17}{section.4.3}
+\contentsline {section}{\numberline {4‏.‏4}تبطين القوائم}{17}{section.4.4}
