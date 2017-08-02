@@ -1,0 +1,322 @@
+\documentclass[12pt,a4paper,onecolumn,notitlepage]{book}
+
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage[pdfauthor={يوسف رفه},pdftitle={دليل وضع كنز (جيوكاش) جديد}]{hyperref}
+	\hypersetup{
+		bookmarks=true,
+		unicode=true,
+	    colorlinks=true,
+	    citecolor=black,
+	    filecolor=black,
+	    linkcolor=slategray2Dark,
+	    urlcolor=slategray2Dark
+	}
+\usepackage[depthadjust]{marginnote}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{fourier-orns}
+\usepackage[showframe=false,includeheadfoot]{geometry}
+	\geometry{verbose,top=4mm,headheight=15mm,headsep=10mm,hmargin=10mm,bottom=15mm,footskip=20mm,marginparsep=5mm,marginparwidth=10mm,left=0.9in,right=1.2in,textwidth=500pt}
+\usepackage{polyglossia}
+\usepackage{color}
+\usepackage{pifont} % for \ding{#}
+\usepackage{titlesec}
+	\titleformat{\chapter}[frame]
+	  {\normalfont\sffamily\huge\bfseries\color{slategray2}}
+	  {\chaptertitlename \thechapter}{1.1em}{}
+	\titleformat{\section}
+	  {\normalfont\sffamily\Large\bfseries\color{slategray2}}
+	  {\thesection}{0.85em}{}
+  	\titleformat{\subsection}
+  	  {\normalfont\sffamily\large\bfseries\color{slategray2}}
+  	  {\thesubsection}{0.55em}{}
+\usepackage{framed}
+\usepackage{layout}
+\usepackage{setspace} % to add \doublespacing
+\usepackage[Q=yes]{examplep} % for verbatim description lists and titles \Q and \PVerb
+\usepackage{enumitem}
+\usepackage{marvosym}
+%\usepackage[utf8]{inputec}
+
+%\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{1}
+ 
+ 
+% Font styles and settings
+\setmainfont[Ligatures=TeX]{Amiri}
+\setsansfont[Ligatures=TeX,Script=Arabic,Scale=1.5]{Amiri}
+\setmonofont{Courier New}
+\newfontfamily\arabicfont[Script=Arabic,Ligatures=TeX]{Amiri}
+\newfontfamily\DiwanThuluth[Scale=20]{Diwan Thuluth}
+\newfontfamily\DiwanT[Scale=4.5]{Diwan Thuluth}
+\newfontfamily\DiwanTitle[Scale=2]{Diwan Thuluth}
+
+% set numerals=maghrib so page numbers are displayed in Arabic instead of
+% eastern Arabic numerals. Otherwise, remove it for eastern Arabic numerals.
+\setmainlanguage[numerals=maghrib]{arabic}
+\setotherlanguage{english}
+
+% Page styles and margins
+
+\pagestyle{fancy}
+
+
+\fancyhf{}  % delete current header and footer
+% \fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[L]{\bfseries\footnotesize\rightmark}
+\fancyhead[R]{\bfseries\footnotesize\leftmark}
+\fancyfoot[L]{\bfseries\footnotesize\leafleft\href{http://www.YRaffah.com}{YRaffah.com}\leafright}
+\fancyfoot[C]{\bfseries \thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % space for the rule
+\fancypagestyle{plain}{%
+	\fancyhf{} % clear all header and footer fields
+	\fancyhead{} % get rid of headers on plain pages
+	\fancyfoot[C]{\bfseries\footnotesize\thepage} % except the center
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}}
+
+
+% Setting newcommands
+%
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\renewcommand*{\marginfont}{\color{slategray2}\sffamily}
+
+
+% Title and Author data
+% 
+\providecommand{\HUGE}{\Huge}% if not using memoir
+\newlength{\drop}% for my convenience
+\thispagestyle{plain}
+\newcommand*{\titleLL}{\begingroup% Lost Languages
+\drop=0.1\textheight
+\fboxsep 0.5\baselineskip
+\sffamily
+\vspace*{\drop}
+\centering
+{\textcolor{Blue}{\HUGE دليل وضع كنز (جيوكاش) جديد}}\par
+\vspace{0.5\drop}
+\colorbox{babyblueeyes}{\textcolor{white}{\normalfont\itshape\Large{\DiwanTitle تأليف: يُوسُف عَدنَان رَفـَّــه}}}\par
+
+
+\vspace{\drop}
+\footnotesize{\par{الإصدار 0.1}}
+
+\vspace{\drop}
+\begin{center}
+	\color{slategray2Light}
+	{\fontsize{70}{84}\selectfont \textsection}
+\end{center}
+\vfill
+
+{\footnotesize{29 يوليو 2017م}}\par
+\vspace*{\drop}
+\endgroup}
+% end of title page customization.
+
+% Setting newenvironment for dedication section
+\newenvironment{dedication}
+{
+\clearpage
+\vspace*{\stretch{1}}
+\hfill\begin{minipage}[t]{0.66\textwidth}
+\raggedleft
+
+}%
+{
+\end{minipage}
+\vspace*{\stretch{3}}
+\begin{center}
+\color{slategray2}
+{\HUGE\Pisces}
+\end{center}
+}
+
+% New colored framed box environment
+\newenvironment{cframed}[1][white]
+  {\def\FrameCommand{\fboxsep=\FrameSep\fcolorbox{#1}{Dark}}%
+    \MakeFramed {\advance\hsize-\width \FrameRestore}}
+  {\endMakeFramed}
+  
+
+% COLORS
+\definecolor{darkgreen}{rgb}{0.4, 0.01, 0.24}
+\definecolor{royalazure}{rgb}{0.0, 0.22, 0.66}
+\definecolor{brown}{rgb}{0.4, 0.01, 0.24}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{unitednationsblue}{rgb}{0.36, 0.57, 0.9}
+\definecolor{blue(rgb)}{rgb}{0.01, 0.28, 1.0}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{screamingreen}{rgb}{0.46, 1.0, 0.44}
+\definecolor{limegreen}{rgb}{0.2, 0.8, 0.2}
+\definecolor{islamicgreen}{rgb}{0.0, 0.56, 0.0}
+\definecolor{upforestgreen}{rgb}{0.0, 0.27, 0.13}
+\definecolor{icterine}{rgb}{0.99, 0.97, 0.37}
+\definecolor{orange(colorwheel)}{rgb}{1.0, 0.5, 0.0}
+\definecolor{orange-red}{rgb}{1.0, 0.27, 0.0}
+\definecolor{oucrimsonred}{rgb}{0.6, 0.0, 0.0}
+\definecolor{cottoncandy}{rgb}{1.0, 0.74, 0.85}
+\definecolor{orchid}{rgb}{0.85, 0.44, 0.84}
+\definecolor{vividcerise}{rgb}{0.85, 0.11, 0.51}
+\definecolor{patriarch}{rgb}{0.5, 0.0, 0.5}
+\definecolor{lightbrown}{HTML}{BF6830}
+\definecolor{gray}{HTML}{616D7E}
+\definecolor{slategray2}{HTML}{B4CFEC}
+\definecolor{slategray2Dark}{HTML}{3B6999}
+\definecolor{slategray2Light}{HTML}{CADFF6}
+\definecolor{slategray2VeryLight}{HTML}{D5E5F6}
+\definecolor{slategray2Gray}{HTML}{92A1B1}
+%% Some shades
+\definecolor{Dark}{gray}{0.2}
+\definecolor{MedDark}{gray}{0.4}
+\definecolor{Medium}{gray}{0.6}
+\definecolor{Light}{gray}{0.8}
+
+% Set double spacing for the text
+\doublespacing
+
+\begin{document}
+
+% Title page
+\pagenumbering{alph}
+\titleLL
+\begin{center}
+	\color{slategray2VeryLight}
+	{\HUGE\Pisces}
+\end{center}
+
+
+% Adding thanks and dedication section
+
+\begin{dedication}
+{\Huge\color{slategray2Gray}{{\fontsize{80}{90}\selectfont \}}{\color{slategray2}{\DiwanT شُكْرٌ وإِهْداءْ}}\par}}\vspace{38pt}شكرا لكل من ألهمني لكتابة هذه القائمة البسيطة و بالأخص مجتمع البحث عن الكنوز في جدة وكل الجيوكاشرز و مجموعة \textenglish{JRC}. كما أنني قمت باستقطاب بعض النصوص وترجمتها من موقع \textenglish{\href{http://www.Geocaching.com}{Geocaching.com}} والتابع لشركة \textenglish{Groundspeak Inc.}
+		كما أشكر موقع \textenglish{\href{http://www.HejazUltra.org}{HejazUltra.org}} على قبول نشر هذا المستند ودعمهم الكبير لهذه اللعبة الرائعة.
+\end{dedication}
+
+% Table of Contents
+\newpage
+
+\pagenumbering{arabic}
+	
+% Beginning of content.
+% Beginning of Chapters and Sections
+\pagestyle{fancy}
+\section*{نبذة}
+\paragraph{نبذة:} % (fold)
+\label{par:نبذة}
+قبل أن نبدأ في قائمة التدقيق هناك عدة أمور يجب توضيحها للتأكد من جاهزيتك لزراعة جيوكاش\footnote{الجيوكاش: المقصود به هو الكنز نفسه وسيتم استخدام كلمة جيوكاش بشكل عام في هذا المستند ليتماشى مع الكلمة الأصلية \textenglish{Geocache}} جديد.
+أعرف أنك متحمس جدا لزراعة الكاش الخاص بك ولكن يجب أن تعلم أن حلاوة اللعبة تكمن في استمراريتها والاستمتاع في إيجاد الكاشات داخل جو تملأه المغامرة والتحدي.
+
+
+% paragraph مقدمة (end)
+
+
+\newpage
+
+\section*{القواعد الأساسية لوضع كاش جديد: قواعد تحديد كاش جديد}
+\label{sec:قواعد تحديد كاش جديد}
+
+\begin{quotation}
+
+\textcolor{slategray2Dark}{\ding{125}}\textcolor{gray}{حين تَوَد وضع كاش جديد فكر في السبب الذي سيجعل غيرك من اللاعبين يأتون لنفس هذا المكان. إن كان السبب الوحيد هو الكاش فقط فيجب عليك تغيير المكان.}
+
+\textcolor{slategray2Dark}{\ding{125}}  - \textenglish{briansnat}
+
+\end{quotation}
+\paragraph{كلما لعبت واكتشفت كاشات متعددة ومختلفة كلما زادت خبرتك وحسك الـ \emph{"جيوكاشي"} وبالتالي ستزداد خبرتك في اختيار الخصائص والأماكن الأنسب للجيوكاش. هذا الكم من الخبرة لا يقدر بثمن عندما تقوم بوضع كاش جديد وسيزيد من استمتاع اللاعبين الآخرين ومجتمع الجيوكاشينج بشكل عام. يفضل أن تقوم بإيجاد ما لا يقل عن \textbf{20 جيوكاش} قبل أن تقوم بوضع الكاش الخاص بك.}
+
+\begin{enumerate}
+\item إرشادات وضع الكاش الأساسية
+\begin{enumerate}[
+rightmargin=0pt, itemindent=20pt,
+labelwidth=15pt, labelsep=5pt, listparindent=0.7cm,
+align=right]
+\item إحترام القوانين العامة وعدم التعدي على الممتلكات الخاصة
+
+وهذا ينطبق سواءًا على مكان وضع الكاش نفسه أو حتى المكان أو الطريق المؤدية له. ينبغي عليك مراعاة عدم مرور اللاعبين الآخرين بأماكن محظورة أو ممتلكات خاصة أو ما إلى ذلك.
+\item استكمال جميع المتطلبات والتراخيص اللازمة أو الإذن الخطي المطلوب لوضع الكاش سواء كان ذلك بوضعه في منطقة ممتلكات خاصة أو مكان عام
+
+أثناء نشرك للكاش فأنت تؤكد استيفائك لجميع الشروط والتصاريح اللازمة لوضع الكاش خصوصا لو كان في منطقة ممتلكات خاصة أو عامة. كما يفضل ذكر ذلك في صفحة خصائص الكاش ليعلم الجميع بذلك. 
+\item إياك أن تدفن الكاش أو حتى جزء منه
+
+إخفاءك للكاش يجب أن يكون بطريقة ذكية دون أن تقوم بدفنه. سيتم إلغاء الكاش في حال ثبوت ذلك ويمكنك وجعه فوق صخرة أو خلف لوحة أو في شجرة وما إلى ذلك من الأمان المميزة والذكية.
+\item يجب أن لا تُدَمّر الممتلكات العامة أو الخاصة.
+
+من البديهي أنه يجب عدم العبث بالممتلكات الخاصة أو العامة من أجل وضع كاش معين. بل بالعكس، فإن وضع الكاشات هدفه الأساسي هو الاستمتاع بالبيئة المحيطة سواءا كانت طبيعية أو من صنع الإنسان.
+\item المحافظة على الحياة البرية والبيئة الطبيعية.
+
+يجب مراعاة المحافظة على الحياة البرية والحيوانات وكذلك البيئة الطبيعية من أن يمسها أي دمار بسبب الكاش أو من أجل الوصول له. لذى قد تجد بعض الكاشات يُمنَع الوصول لها في فترات معينة من السنة للمحافظة على بعض الكائنات الحية في المنطقة.
+\item عدم وضع الكاشات في المناطق الممنوعة والمشبوهة والغير مناسبة.
+
+كما أن القوانين المحلية قد تكون أكثر صرامة في تحديد الأماكن الممنوعة
+\end{enumerate}
+\item اعتبارات أخرى لوضع الكاش
+\begin{enumerate}[
+rightmargin=0pt, itemindent=20pt,
+labelwidth=15pt, labelsep=5pt, listparindent=0.7cm,
+align=right]
+\item اختر المكان المناسب والحاوية المناسبة
+
+فكر في كيف سيقوم الآخرين بالتعامل مع اللاعبين الآخرين عند قيامهم بمحاولة إيجاد الكاش أو وضعه في مكانه مرة أخرى. حتى وإن حصلت على التراخيص اللازمة فإن المكارة أو الأشخاص الآخرين قد يلاحظون حركة اللاعبين الآخرين ويشتبهون فيها وقد يصل الأمر فيهم لإبلاغ السُلُطات المعنية. أي حاوية قد توحي إلى أنها تشبه القنبلة أو أي عنصر آخر مشبوه مرفوضة تماما في هذه اللعبة.
+\item قم بتغليف الحاوية
+
+لتقليل وتخفيف الشُبُهات حول الحاوية وخصوصا عند اكتشافها من قبل الـ \textenglish{Mugglers} واللذين لا يعرفون شيئا عن اللعبة أو فكرتها يُفَضّل وضع ملصق أو تغليف على الحاوية من الخارجة مكتوب عليه جيوكاش \textenglish{Geocache} بالإضافة إلى رمز الكاش الرسمي. كما أن الحاويات الشفافة مفيدة في إظهار محتواها وأنها أشياء غير خطيرة. ولا تنسى إضافة ورقة ملاحظة الكاش\footnote{ملاحظة الكاش والمعروفة باسم \textenglish{Cache Note} يمكن تحميلها مجانا من موقع \textenglish{\href{http://www.HejazUltra.org}{HejazUltra.org}}}.
+\end{enumerate}
+
+\end{enumerate}
+% \section{قواعد تحديد كاش جديد} (end)
+\clearpage
+
+% begin new section
+\section*{خطوات وضع كاش جديد}
+\label{sec:خطوات وضع كاش جديد}
+يمكنك اتباع هذه الخطوات البسيطة لوضع كاش جديد بنجاح بإذن الله.
+\begin{enumerate}
+\item\textbf{ الخطوة الأولى: حدد ومن ثم راجع موقع وضع الكاش}
+\paragraph{أهم مافي الكاش هو الموقع! هذا الموقع يجب أن يكون مميزا وذو قيمة لمن سيقوم بزيارة الكاش الخاص بك. بإمكانك وضع الكاش في أي مكان عام وعلى جانب الطريق مثلا ولكن مالمتعة في ذلك؟ قارن ذلك بوضع كاش في منطقة تخييم جميلة أو مَطَل من هضبة أو جبل على منظر خلّاب مثلا!.}
+
+\paragraph{يفضل مراعاة التالي عند اختيار مكان الكاش:}
+
+\begin{enumerate}
+\item هل مكان الكاش يتماشى مع القواعد الأساسية؟
+\item تأكد من أن لا يكون الكاش على مَرئَىً من عامة الناس أو يصعب على اللاعبين الآخرين الوصول له دون أن يراهم الآخرين. يجب أن يكون الكاش في مكان يسمح للاعب أن يصل له ويخرج الكاش من مخبأه دون آن يراه أحد. ليس ذلك فحسب بل يجب أن يتمكن من إرجاعه دون أن يلاحظه أحد لتستمر اللعبة.
+\item هل حصلت على التصاريح أو التراخيص اللازمة لوضع الكاش في حال كان الموقع من ضمن أملاك خاصة أو تابع لجهة معينة. لاحظ أنه لا يمكنك التعدي على حقوق وممتلكات الآخرين دون أخذ إذن خطي منهم وإلا ستتعرض إلى المسائلة القانونية.
+\item راعي أن لا يكون مكان الكاش ملفتا للأنظار بشكل يثير الشبهات.
+
+أنت الشخص المسؤول عن الكاش أولا وأخيرا وهو مسؤوليتك وحدك، لذلك يجب أن تكون مُلِمّاً بالقوانين والأنظمة في بلدك (المملكة العربية السعودية). كما يجب أن تراعي خصوصية الآخرين وكن على يقين بأن هناك بعض المَارّة والمشاة في ذلك المكان.
+\item راعي أن لا يكون هناك تدمير للبيئة أو الحياة الفطرية أو الطبيعية في الحصول على الكاش. نحن نحب الطبيعة.
+\item وضع الكاش في مكان مقابل نوافذ أو مبانٍ مكتبية قد يثير بعض الشكوك ويعرض الكاش للاكتشاف بسهولة من قبل الـ \textenglish{Mugglers}\footnote{الـ \textenglish{Mugglers} هم عامة الناس واللذين لا يعلمون شيئاً عن اللعبة وقد يثير فضولهم رؤية شخص يقوم باكتشاف الكاش أو إعادته إلى مكانه ليقوموا بالعبث به وغالبا أخذ الحاوية وبالتالي تخريب اللعبة على بقية اللاعبين.}
+\end{enumerate}
+\item\textbf{الخطوة الثانية: إعداد الكاش}
+\begin{description}
+\item[\textbf{حاوية الكاش}]
+إبداء باختيار الحاوية المناسبة والتي ستتحمل الظروف المناخية المتغيرة مثل المطر والأتربة وغيرها. يفضل استخدام حاولة مقاومة للماء أو حاوية ذخيرة أو حاويات بحرية. كما يفضل وضع محتويات الحاوية داخل كيس حفظ الأطعمة لحمايتها من الماء في حال لم تتحمل الحاوية الظروف المناخية ودخلت المياه إلى داخل الحاوية. وكذلك ينصح بوضع ملصقات على الحاوية أو كتابة أنها \emph{جيوكاش} أو \emph{\textenglish{Official Geocache}} واسم الكاش وبعض معلومات الاتصال المناسبة.
+\item[\textbf{محتويات الكاش}]
+بداية ستحتاج إلى وضع دفتر سجلات \textenglish{Log Book} ليُدَوِّن الزوار سجلاتهم فيه. كما يفضل وضع قلم أو مرسام للكتابة فقد ينسى بعض الزوار إحضار قلم معهم.
+من الجيد كذلك إضافة ورقة ملاحظة الكاش والمعروفة باسم الـ \textenglish{Cache Note} والمتوفرة على موقع \textenglish{\href{http://www.HejazUltra.org}{HejazUltra.org}}.
+
+وأخيرا ورغم أنه ليس بالأمر المطلوب لكنه حتما سيزيد من حماس اللاعبين الآخرين لزيارة الكاش الخاص بك هو وضع بعض المقتنيات الغير ثمينة والتي تود مشاركتها مع الآخرين. قد تكون ألعاب صغيرة للأطفال أو رموز أو عملات معدنية أو دُمَى أو أي شيء آخر. الناس من مختلف الشرائح والأعمار سيزوروا الكاش الخاص بك، لذلك يجب مراعاة ذلك وعدم وضع أي عناصر قد تكون غير مناسبة لهم مثل سكاكين أو مواد متفجرة أو خطرة. لاتنسى أنك لاتريد خرق قوانين الدولة.
+
+نقطة أخيرة ومهمة جدا هي أن الحيوانات لديها حاسة شم أقوى من الإنسان بكثير. ولذلك يجب أن لا تضع أي مواد غذائية في الحاوية لأنها ستقوم بمحاولة العبث بها واستخراج مافيها وبالتالي ستخسر الحاوية وغالبا كل محتوياتها. \textbf{لا تضع أي أكل أو مواد غذائية في الحاوية.}
+\end{description}
+\item\textbf{الخطوة الثالثة: وضع الكاش في الموقع الصحيح}
+عند وصولك لمكان وضع الكاش الذي اخترته بعد عناية ومراجعة، تأكد من أن جهاز تحديد المواقع الخاص بك (جهاز الـ \textenglish{GPS}) قد قام بالتقاط إشارة قوية وتحديد الإحداثيات بشكل دقيق. هذه نقطة جدا مهمة في سبيل تحديد موقع الكاش وليتمكن الآخرون من إيجاده كذلك. لاحظ أن أجهزة الـ \textenglish{GPS} قد تتأثر باختلاف حالة الطقس في حال وجود غيوم كثيفة أو في حال وجود غطاء من الأشجار مما قد يحجب أو يضعف الإشارة. بعض أجهزة الـ \textenglish{GPS} الحديثة تقوم بتحديد متوسط للإحداثيات. لكن لو كان جهازك لا يدعم هذه الخاصية فيفضل أخذ عدة قراءات و من ثم إختيار الأفضل منها.
+\item\textbf{الخطوة الرابعة: نشر الكاش}
+تأكد من مراجعة القواعد الأساسية لنشر الكاش وتعديل ما يجب تعديله قبل نشر الكاش.
+راجع خصائص الكاش واختر الأنسب منها.
+\item\textbf{الخطوة الخامسة: صيانة الكاش}
+أنت مسؤول عن صيانة الكاش بعد وضعه ونشره للعالم. لذلك تأكد من أنك ستتمكن من ذلك وأنك قادر على العودة لصيانة الكاش بين فترة وأخرى وتأكد من سلامة الحاوية. كما أنك مسؤول عن المنطقة المحيطة بالكاش وما إن كان وجود اللاعبين الآخرين قد أثر على البيئة أو الحياة الطبيعية. وفي هذه الحالة يجب عليك تغيير مكان الكاش وتعديل بيانات نشره على الموقع.
+كنا أنه يمكنك نقل ملكية الكاش إلى لاعب آخر بعد أن تقوم بالإتفاق معه ليصبح هو مالك الكاش الجديد أو في بعض الأحيان يمكن أن يكون هناك أكثر من شخص يقبلون بأن يتشاركوا معك صيانة الكاش.
+\end{enumerate}
+% \chapter{خطوات وضع كاش جديد}
+
+\begin{center}
+\vfill
+\textcolor{slategray2Dark}{{\DiwanThuluth انتهى}}
+\end{center}
+
+
+\end{document}
